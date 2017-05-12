@@ -21,6 +21,9 @@ class Converter():
             err_msg = '{0} currency was not found.'.format(self.base_currency)
             raise requests.exceptions.HTTPError(err_msg)
 
+    def get_currencies(self):
+        return self.rates.keys()
+
     def change_base_currency(self, new_base_currency):
         if new_base_currency != self.base_currency:
             self.base_currency = new_base_currency.upper()

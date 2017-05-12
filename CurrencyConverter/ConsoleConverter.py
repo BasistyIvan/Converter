@@ -10,11 +10,15 @@ def isFloat(value):
 
 def main():
     converter = Converter()
+
     print('To exit the program type "exit" in "Sum>" field')
 	
 	# To catch errors from change_base_currency method
-    try:  
-        converter.change_base_currency('gbp')
+    try:
+        print('List of available currencies:')
+        for curr in converter.get_currencies():
+            print(curr)  
+        #converter.change_base_currency('gbp')
         while True:
             try:
                 value = input('Sum> ')
