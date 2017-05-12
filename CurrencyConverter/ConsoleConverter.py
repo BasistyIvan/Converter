@@ -11,8 +11,9 @@ def isFloat(value):
 def main():
     converter = Converter()
     print('To exit the program type "exit" in "Sum>" field')
-
-    try:  # To catch errors from change_base_currency method
+	
+	# To catch errors from change_base_currency method
+    try:  
         converter.change_base_currency('gbp')
         while True:
             try:
